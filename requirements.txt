@@ -1,4 +1,6 @@
-pytest
+pytest~=8.3.5
 allure-pytest
-selene
-allure-python-commons
+selene~=2.0.0rc9
+allure-python-commons~=2.13.5
+selenium~=4.30.0
+python-dotenv~=1.1.0
