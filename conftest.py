@@ -17,7 +17,7 @@ def pytest_addoption(parser):
     )
 
 
-def load_dotenv():
+def load_env():
     load_dotenv()
 
 
