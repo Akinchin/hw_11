@@ -17,13 +17,16 @@ def pytest_addoption(parser):
     )
 
 
+from dotenv import load_dotenv
+import os
+
+@pytest.fixture(scope="session", autouse=True)
 def load_env():
     load_dotenv()
 
-
-@pytest.fixture(scope='session', autouse=True)
-def load_env():
-    load_dotenv()
+selenoid_login = os.getenv("SELENOID_LOGIN")
+selenoid_pass = os.getenv("SELENOID_PASS")
+selenoid_url = os.getenv("SELENOID_URL")
 
 
 @pytest.fixture(scope='function')
